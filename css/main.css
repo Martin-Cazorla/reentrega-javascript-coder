@@ -1,1 +1,240 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #0a0a0b;
+  line-height: 1.6;
+}
+
+.site-header {
+  background-color: rgba(10, 10, 11, 0.9);
+  padding: 1rem 0;
+  border-bottom: 2px solid #9d50bb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.site-header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.site-header h1 a, .site-header a {
+  color: #bc6ff1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.site-footer {
+  background-color: #0a0a0b;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(157, 80, 187, 0.2);
+}
+.site-footer p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.bg-home-login {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/img-animes-juntos.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.bg-catalog-player {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/img-fondo-rep-ctalog.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.plans-container .plan-card {
+  background: rgba(20, 20, 22, 0.85);
+  border: 1px solid rgba(157, 80, 187, 0.3);
+  border-radius: 15px;
+  padding: 2.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+.plans-container .plan-card:hover {
+  transform: translateY(-10px);
+  border-color: #bc6ff1;
+}
+.plans-container .plan-card h3 {
+  color: #bc6ff1;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.plans-container .plan-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+.btn-kaiju, .login-container #login-form button {
+  background: linear-gradient(45deg, #6e48aa, #9d50bb);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn-kaiju:hover, .login-container #login-form button:hover {
+  background: #bc6ff1;
+}
+
+#planes-section {
+  padding: 4rem 0;
+}
+#planes-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.planes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#checkout-container {
+  background: rgba(20, 20, 22, 0.85);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px dashed #bc6ff1;
+}
+#checkout-container.hidden {
+  display: none;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container #login-form {
+  background: rgba(20, 20, 22, 0.85);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(157, 80, 187, 0.4);
+}
+.login-container #login-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bc6ff1;
+}
+.login-container #login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(157, 80, 187, 0.2);
+  border-radius: 5px;
+  color: white;
+  outline: none;
+}
+.login-container #login-form input:focus {
+  border-color: #bc6ff1;
+  background: rgba(255, 255, 255, 0.15);
+}
+.login-container #login-form button {
+  margin-bottom: 1rem;
+}
+.login-container #login-form a {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+.login-container #login-form a:hover {
+  opacity: 1;
+  color: #bc6ff1;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 2rem 0;
+}
+.anime-grid .anime-card {
+  background: #0a0a0b;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(157, 80, 187, 0.2);
+}
+.anime-grid .anime-card:hover {
+  transform: scale(1.05);
+  border-color: #bc6ff1;
+}
+.anime-grid .anime-card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.anime-grid .anime-card .info {
+  padding: 1rem;
+  text-align: center;
+}
+.anime-grid .anime-card .info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#player-engine {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  margin: 2rem 0;
+  border: 3px solid #9d50bb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(157, 80, 187, 0.5);
+}
+
+#video-title {
+  color: #bc6ff1;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}/*# sourceMappingURL=main.css.map */

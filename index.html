@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaijuStream | Inicio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-home-login">
+    <header class="site-header">
+        <div class="header-container container">
+            <h1><a href="index.html">KaijuStream</a></h1>
+            <nav id="nav-auth">
+                <a href="pages/login.html" class="btn">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="planes-section">
+            <h2 class="text-center">Elige tu Plan</h2>
+            <div id="planes-container" class="planes-grid"></div>
+
+            <div id="checkout-container" class="hidden">
+                <div id="selected-plan-details"></div>
+                <button id="btn-pay" class="btn-primary">Pagar</button>
+                <button id="btn-back" class="btn-secondary">Volver</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 KaijuStream | Héctor Martín Cazorla Sota</p>
+    </footer>
+
+    <script src="js/data/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

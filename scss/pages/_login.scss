@@ -1,0 +1,58 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+    #login-form {
+        background: $card-bg;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        width: 100%;
+        max-width: 400px;
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba($primary-color, 0.4);
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $accent-color;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba($primary-color, 0.2);
+            border-radius: 5px;
+            color: white;
+            outline: none;
+
+            &:focus {
+                border-color: $accent-color;
+                background: rgba(255,255,255,0.15);
+            }
+        }
+
+        button {
+            @extend .btn-kaiju; 
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: $text-light;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+                color: $accent-color;
+            }
+        }
+    }
+}

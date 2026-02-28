@@ -1,0 +1,16 @@
+// Mixin para fondos 
+@mixin full-background($url) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url($url) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+// Aplicación por clase 
+.bg-home-login {
+    @include full-background('../../assets/img/img-animes-juntos.jpg');
+}
+
+.bg-catalog-player {
+    @include full-background('../../assets/img/img-fondo-rep-ctalog.jpg');
+}

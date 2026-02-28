@@ -1,0 +1,19 @@
+// Abstracts 
+@import 'abstracts/variables';
+
+// Base
+@import 'base/reset';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/backgrounds';
+
+// Components
+@import 'components/cards';
+
+// Pages 
+@import 'pages/index';
+@import 'pages/login';
+@import 'pages/catalogo';
+@import 'pages/reproductor';

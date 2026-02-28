@@ -1,0 +1,18 @@
+#player-engine {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    background: #000;
+    margin: 2rem 0;
+    border: 3px solid $primary-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba($primary-color, 0.5);
+}
+
+#video-title {
+    color: $accent-color;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}

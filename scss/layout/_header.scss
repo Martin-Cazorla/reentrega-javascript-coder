@@ -1,0 +1,27 @@
+.site-header {
+    background-color: rgba($bg-dark, 0.9);
+    padding: 1rem 0;
+    border-bottom: 2px solid $primary-color;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h1 a, a {
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
