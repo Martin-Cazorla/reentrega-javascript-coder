@@ -2,11 +2,13 @@
     background-color: $bg-dark;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 4rem;
+    width: 100%; 
     border-top: 1px solid rgba($primary-color, 0.2);
+    margin-top: auto; 
 
     p {
         color: rgba($text-light, 0.6);
         font-size: 0.9rem;
+        margin: 0; 
     }
 }

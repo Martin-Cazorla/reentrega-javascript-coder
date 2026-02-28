@@ -6,14 +6,26 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
+<!--cuerpo de la pagina con clase para background-->
 <body class="bg-catalog-player">
+
+<!--header con nav bar de navegacion-->
+    <header class="site-header">
+        <div class="header-container container">
+            <a href="../index.html">KaijuStream</a>
+            <span id="user-name"></span>
+        </div>
+    </header>
+    
+<!--contenedor de reproductor de video-->
     <main class="container">
         <h2 id="video-title">Reproduciendo...</h2>
         <div id="player-engine"></div>
         <a href="catalogo.html" class="btn">Volver al catálogo</a>
     </main>
-
+<!--enlace javascript-->
     <script src="../js/reproductor.js"></script>
+
 </body>
 
 </html>

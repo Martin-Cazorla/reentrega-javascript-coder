@@ -7,10 +7,11 @@
 }
 
 // Aplicación por clase 
+// estilos para index.html y login.html
 .bg-home-login {
     @include full-background('../../assets/img/img-animes-juntos.jpg');
 }
-
+//estilos para catalogo.html y reproductor.html
 .bg-catalog-player {
     @include full-background('../../assets/img/img-fondo-rep-ctalog.jpg');
 }
