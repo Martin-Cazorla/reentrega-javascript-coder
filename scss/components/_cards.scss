@@ -1,38 +1,97 @@
-// Estructura de las cards de planes index.html
-.plans-container {
-    display: flex;            
-    justify-content: center;   
-    align-items: stretch;      
-    gap: 2rem;                 
-    padding: 2rem;
-    flex-wrap: wrap;           
+// Bloque de estilos para las tarjetas
 
+// Contenedor padre que sostiene todas las tarjetas
+.planes-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+
+// Estilo de la tarjeta individual
     .plan-card {
-        background: $card-bg;
-        border: 1px solid rgba($primary-color, 0.3);
+        background: $card-bg; 
+        border: 1px solid rgba($primary-color, 0.3); 
         border-radius: 15px;
         padding: 2.5rem;
         width: 300px;
         text-align: center;
-        transition: transform 0.3s ease;
-        backdrop-filter: blur(5px); 
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative; 
 
-        // Efecto al posicionar el cursor
+// Estilo al pasar el mouse por encima
         &:hover {
-            transform: translateY(-10px); 
-            border-color: $accent-color;
+            transform: translateY(-10px);
+            border-color: $accent-color; 
+            box-shadow: 0 10px 20px rgba($bg-dark, 0.5);
+        }
+
+// Estilo especial para el plan recomendado 
+        &.plan-card--destacado {
+            border: 2px solid $accent-color; 
+            transform: scale(1.05);
+
+            &:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 0 20px rgba($accent-color, 0.3);
+            }
         }
 
         h3 {
-            color: $accent-color;
+            color: $accent-color; 
             margin-bottom: 1rem;
             text-transform: uppercase;
+            font-size: 1.5rem;
+            font-family: $main-font;
         }
 
-        .price {
+// Estilo para el valor de los planes
+        .plan-precio { 
             font-size: 2rem;
             font-weight: bold;
             margin: 1.5rem 0;
+            color: $text-light;
+        }
+        
+// Estilo para los beneficios dentro de cada plan
+        .plan-beneficios {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            text-align: left;
+            color: rgba($text-light, 0.8);
+
+            li {
+                margin-bottom: 0.8rem;
+                font-size: 0.95rem;
+                
+                &::before {
+                    content: "✓";
+                    margin-right: 10px;
+                    color: $accent-color; 
+                    font-weight: bold;
+                }
+            }
+        }
+
+// El cartel de MÁS ELEGIDO
+        .badge-recomendado {
+            background: $accent-color;
+            color: $bg-dark; 
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
     }
 }

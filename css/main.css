@@ -27,6 +27,17 @@ main {
   flex: 1;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /*HEADER*/
 .site-header {
   background-color: rgba(10, 10, 11, 0.95);
@@ -194,7 +205,7 @@ main {
   min-height: 100vh;
 }
 
-.plans-container {
+.planes-grid {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -202,29 +213,75 @@ main {
   padding: 2rem;
   flex-wrap: wrap;
 }
-.plans-container .plan-card {
+.planes-grid .plan-card {
   background: rgba(20, 20, 22, 0.85);
   border: 1px solid rgba(157, 80, 187, 0.3);
   border-radius: 15px;
   padding: 2.5rem;
   width: 300px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
-.plans-container .plan-card:hover {
+.planes-grid .plan-card:hover {
   transform: translateY(-10px);
   border-color: #bc6ff1;
+  box-shadow: 0 10px 20px rgba(10, 10, 11, 0.5);
 }
-.plans-container .plan-card h3 {
+.planes-grid .plan-card.plan-card--destacado {
+  border: 2px solid #bc6ff1;
+  transform: scale(1.05);
+}
+.planes-grid .plan-card.plan-card--destacado:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(188, 111, 241, 0.3);
+}
+.planes-grid .plan-card h3 {
   color: #bc6ff1;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.plans-container .plan-card .price {
+.planes-grid .plan-card .plan-precio {
   font-size: 2rem;
   font-weight: bold;
   margin: 1.5rem 0;
+  color: #ffffff;
+}
+.planes-grid .plan-card .plan-beneficios {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+}
+.planes-grid .plan-card .plan-beneficios li {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+.planes-grid .plan-card .plan-beneficios li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #bc6ff1;
+  font-weight: bold;
+}
+.planes-grid .plan-card .badge-recomendado {
+  background: #bc6ff1;
+  color: #0a0a0b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
