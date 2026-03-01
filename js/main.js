@@ -1,3 +1,4 @@
+//Archivo que inicia todo
 // Seleccionamos el contenedor del HTML
 const planesContainer = document.getElementById('planes-container');
 
