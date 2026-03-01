@@ -6,27 +6,6 @@
         font-size: 2.5rem;
         margin-bottom: 3rem;
         text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-    }
-}
-
-// Grid de planes 
-.planes-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap; 
-}
-
-// Contenedor de pago 
-#checkout-container {
-    background: $card-bg;
-    padding: 2rem;
-    border-radius: 15px;
-    margin-top: 2rem;
-    text-align: center;
-    border: 1px dashed $accent-color;
-
-    &.hidden {
-        display: none;
+        text-align: center;
     }
 }

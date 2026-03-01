@@ -284,6 +284,50 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#checkout-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: rgba(20, 20, 22, 0.85);
+  border: 2px solid #9d50bb;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+#checkout-container .pago-resumen {
+  margin-bottom: 2rem;
+}
+#checkout-container .pago-resumen h3 {
+  color: #bc6ff1;
+  border-bottom: 1px solid rgba(188, 111, 241, 0.3);
+  padding-bottom: 1rem;
+}
+#checkout-container .pago-resumen p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+#checkout-container .checkout-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .form-group {
   margin-bottom: 1.5rem;
   display: flex;
@@ -445,25 +489,7 @@ input::placeholder {
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-.planes-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-#checkout-container {
-  background: rgba(20, 20, 22, 0.85);
-  padding: 2rem;
-  border-radius: 15px;
-  margin-top: 2rem;
   text-align: center;
-  border: 1px dashed #bc6ff1;
-}
-#checkout-container.hidden {
-  display: none;
 }
 
 .login-container {
