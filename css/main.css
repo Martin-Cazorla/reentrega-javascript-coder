@@ -51,6 +51,9 @@ main {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.site-header h1 a:hover, .site-header a:hover {
+  color: rgb(220.4398734177, 180.7215189873, 247.7784810127);
+}
 
 .site-footer {
   background-color: #0a0a0b;
@@ -111,19 +114,84 @@ main {
   margin: 1.5rem 0;
 }
 
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #bc6ff1;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(157, 80, 187, 0.2);
+  border-radius: 5px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input:focus {
+  border-color: #bc6ff1;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(188, 111, 241, 0.2);
+}
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-container, .login-container #login-form {
+  background: rgba(20, 20, 22, 0.85);
+  padding: 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(157, 80, 187, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
 .btn-kaiju, .login-container #login-form button {
   background: linear-gradient(45deg, #6e48aa, #9d50bb);
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
-  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 .btn-kaiju:hover, .login-container #login-form button:hover {
   background: #bc6ff1;
+  box-shadow: 0 0 15px rgba(188, 111, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-link, .login-container #login-form .login-footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+}
+.btn-link:hover, .login-container #login-form .login-footer-links a:hover {
+  opacity: 1;
+  color: #bc6ff1;
+  border-bottom: 1px solid #bc6ff1;
+  transform: translateX(-5px);
 }
 
 #planes-section {
@@ -159,52 +227,30 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px;
 }
 .login-container #login-form {
-  background: rgba(20, 20, 22, 0.85);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 400px;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(157, 80, 187, 0.4);
 }
 .login-container #login-form h2 {
   text-align: center;
   margin-bottom: 2rem;
   color: #bc6ff1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .login-container #login-form input {
-  width: 100%;
-  padding: 12px;
   margin-bottom: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(157, 80, 187, 0.2);
-  border-radius: 5px;
-  color: white;
-  outline: none;
-}
-.login-container #login-form input:focus {
-  border-color: #bc6ff1;
-  background: rgba(255, 255, 255, 0.15);
 }
 .login-container #login-form button {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
-.login-container #login-form a {
-  display: block;
+.login-container #login-form .login-footer-links {
   text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  margin-top: 1rem;
 }
-.login-container #login-form a:hover {
-  opacity: 1;
-  color: #bc6ff1;
-}
-
 .anime-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -239,19 +285,18 @@ main {
 
 #player-engine {
   width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
   aspect-ratio: 16/9;
   background: #000;
-  margin: 2rem 0;
-  border: 3px solid #9d50bb;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 30px rgba(157, 80, 187, 0.5);
+  border: 2px solid #9d50bb;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(157, 80, 187, 0.3);
 }
 
-#video-title {
-  color: #bc6ff1;
-  text-transform: uppercase;
+.container {
+  text-align: center;
+}
+.container .btn-link, .container .login-container #login-form .login-footer-links a, .login-container #login-form .login-footer-links .container a {
   margin-top: 2rem;
 }/*# sourceMappingURL=main.css.map */

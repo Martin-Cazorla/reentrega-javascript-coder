@@ -1,0 +1,15 @@
+// Funciones de utilidad
+
+// Convertir PX a REM
+@function rem($pixels, $context: 16) {
+    @return ($pixels / $context) * 1rem;
+}
+
+// Aclarar u obscurecer colores
+@function color-lighten($color, $amount: 10%) {
+    @return lighten($color, $amount);
+}
+
+@function color-darken($color, $amount: 10%) {
+    @return darken($color, $amount);
+}

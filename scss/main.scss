@@ -1,5 +1,8 @@
 // Abstracts 
 @import 'abstracts/variables';
+@import 'abstracts/functions'; 
+@import 'abstracts/zindex';
+@import 'abstracts/mixins';
 
 // Base
 @import 'base/reset';
@@ -12,6 +15,8 @@
 
 // Components
 @import 'components/cards';
+@import 'components/forms';
+@import 'components/buttons';
 
 // Pages 
 @import 'pages/index';

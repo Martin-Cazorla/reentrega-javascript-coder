@@ -1,0 +1,7 @@
+// Mixin para fondos con overlay oscuro
+@mixin full-background($url) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url($url) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}

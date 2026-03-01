@@ -1,0 +1,20 @@
+// Gestión centralizada de capas 
+// Se organiza de menor a mayor profundidad
+
+$z-layers: (
+    "below": -1,      
+    "default": 1,     
+    "dropdown": 100,  
+    "header": 1000,   
+    "modal": 2000,    
+    "tooltip": 3000   
+);
+
+// Función interna para obtener el valor del mapa 
+@function z($layer) {
+    @if not map-has-key($z-layers, $layer) {
+        @warn "No existe la capa '#{$layer}' en el mapa $z-layers.";
+        @return null;
+    }
+    @return map-get($z-layers, $layer);
+}

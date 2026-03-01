@@ -1,10 +1,10 @@
 .site-header {
     background-color: rgba($bg-dark, 0.9);
-    padding: 1rem 0;
+    padding: rem(16) 0;
     border-bottom: 2px solid $primary-color;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: z("header");
     backdrop-filter: blur(10px);
 
     .header-container {
@@ -23,5 +23,9 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 2px;
+
+        &:hover {
+            color: color-lighten($accent-color, 15%); 
+        }
     }
 }

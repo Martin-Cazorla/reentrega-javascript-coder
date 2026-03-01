@@ -1,0 +1,46 @@
+// Estilos generales para formularios 
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 0.5rem;
+        color: $accent-color;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba($primary-color, 0.2);
+    border-radius: 5px;
+    color: $text-light;
+    outline: none;
+    transition: all 0.3s ease;
+
+    // Estado cuando el usuario hace clic para escribir
+    &:focus {
+        border-color: $accent-color;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 10px rgba($accent-color, 0.2);
+    }
+
+    // Estilo para el texto de ayuda 
+    &::placeholder {
+        color: rgba($text-light, 0.5);
+    }
+}
+
+// Estilo para formularios dentro de una "Card" de login
+.form-container {
+    background: $card-bg;
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px); 
+    border: 1px solid rgba($primary-color, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}

@@ -1,10 +1,11 @@
+// Layout específico para la página de Catálogo
 .anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 2rem 0;
 
-    // estilos que se aplicarán a las cards creadas por JS
+    // Estilos que se aplicarán a las cards creadas por JS
     .anime-card {
         background: $bg-dark;
         border-radius: 10px;
