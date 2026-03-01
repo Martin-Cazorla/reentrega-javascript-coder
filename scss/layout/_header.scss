@@ -1,11 +1,13 @@
+/*HEADER*/
 .site-header {
-    background-color: rgba($bg-dark, 0.9);
-    padding: rem(16) 0;
+    background-color: rgba($bg-dark, 0.95);
+    padding: 0.5rem 0; 
     border-bottom: 2px solid $primary-color;
     position: sticky;
     top: 0;
     z-index: z("header");
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    transition: transform 0.4s ease-in-out; 
 
     .header-container {
         display: flex;
@@ -14,18 +16,63 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
+        height: 60px; 
     }
 
-    h1 a, a {
+/* Tipográfica */
+    .brand-name {
         color: $accent-color;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 3px; 
+        font-family: $main-font;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 10px rgba($accent-color, 0.3);
 
         &:hover {
-            color: color-lighten($accent-color, 15%); 
+            color: $text-light;
+            text-shadow: 0 0 15px $accent-color;
+            transform: scale(1.02);
         }
+    }
+
+/* Navegación de Catálogo y Reproductor */
+    .nav-platform {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem; 
+
+// Grupo de botones tipo fantasma
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+// Bloque de información de usuario
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-left: 1px solid rgba($text-light, 0.2);
+            padding-left: 1.5rem;
+
+            .user-tag {
+                color: $accent-color;
+                font-weight: 600;
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+/*Botón de acción en el Header */
+    .btn-header {
+        @extend .btn-kaiju; 
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+        width: auto;
+        border-radius: 6px;
     }
 }

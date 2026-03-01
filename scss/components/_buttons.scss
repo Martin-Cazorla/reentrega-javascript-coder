@@ -20,7 +20,7 @@
     }
 }
 
-// BOTÓN SECUNDARIO 
+// Botón secundario
 .btn-link {
     color: $text-light;
     text-decoration: none;
@@ -36,5 +36,26 @@
         color: $accent-color;
         border-bottom: 1px solid $accent-color; 
         transform: translateX(-5px); 
+    }
+}
+
+//Botón para navegación dentro de las pages
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.05);
+    color: $text-light;
+    border: 1px solid rgba($accent-color, 0.4);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba($accent-color, 0.2);
+        border-color: $accent-color;
+        color: $accent-color;
+        box-shadow: 0 0 10px rgba($accent-color, 0.2);
     }
 }

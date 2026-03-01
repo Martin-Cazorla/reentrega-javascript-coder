@@ -8,10 +8,15 @@
 </head>
 <!--cuerpo de la pagina con clase para background-->
 <body class="bg-home-login">
+
 <!--header con nav bar de navegacion-->
     <header class="site-header">
         <div class="header-container container">
-            <h1><a href="index.html">KaijuStream</a></h1>
+            <h1>
+                <a href="index.html" class="brand-name">KaijuStream</a>
+            </h1>
+
+<!--Bloque de Usuario-->
             <nav id="nav-auth">
                 <a href="pages/login.html" class="btn-kaiju" style="width: auto;">Login</a>
             </nav>
@@ -31,10 +36,39 @@
             </div>
         </section>
     </main>
-<!---->
+
+<!--Seccion de Footer-->
     <footer class="site-footer">
-        <p>© 2026 KaijuStream | Héctor Martín Cazorla Sota</p>
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <img src="assets/icons/logo-kaiju-stream.png" alt="KaijuStream" class="footer-logo">
+                <p class="brand-description">La plataforma definitiva para los amantes del anime. Unleash the Titans.</p>
+            </div>
+<!--Enlaces de navegacion entre páginas-->
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/catalogo.html">Catálogo</a></li>
+                    <li><a href="pages/login.html">Planes</a></li>
+                </ul>
+            </div>
+<!--Enlaces de navegacion a redes sociales-->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 KaijuStream | Héctor Martín Cazorla Sota. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
 <!---->
     <script src="js/data/data.js"></script>
     <script src="js/main.js"></script>

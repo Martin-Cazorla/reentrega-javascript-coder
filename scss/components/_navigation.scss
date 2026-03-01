@@ -1,0 +1,58 @@
+/* --- ENLACES DE NAVEGACIÓN --- */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+
+    a:not(.btn-kaiju) {
+        color: $text-light;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 5px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $accent-color;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            opacity: 1;
+            color: $accent-color;
+            &::after {
+                visibility: visible;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* --- BLOQUE DE USUARIO (PLATAFORMA) --- */
+.user-block {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border-left: 1px solid rgba($text-light, 0.3);
+    padding-left: 2.5rem;
+
+    .user-tag {
+        color: $accent-color;
+        font-weight: bold;
+        font-size: 0.95rem;
+        text-transform: capitalize;
+        font-family: $main-font;
+    }
+}

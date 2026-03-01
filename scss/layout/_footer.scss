@@ -1,14 +1,89 @@
 .site-footer {
-    background-color: $bg-dark;
-    text-align: center;
-    padding: 2rem 0;
-    width: 100%; 
-    border-top: 1px solid rgba($primary-color, 0.2);
-    margin-top: auto; 
+    background-color: rgba($bg-dark, 0.98);
+    border-top: 2px solid $primary-color;
+    padding: 4rem 0 2rem 0;
+    margin-top: 5rem;
+    color: $text-light;
 
-    p {
-        color: rgba($text-light, 0.6);
-        font-size: 0.9rem;
-        margin: 0; 
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+        gap: 3rem;
+        padding-bottom: 3rem;
+    }
+
+/* Columna de Marca */
+    .footer-brand {
+        flex: 1;
+        min-width: 250px;
+
+        .footer-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 5px rgba($accent-color, 0.2));
+        }
+
+        .brand-description {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+    }
+
+/* Columnas de Enlaces y Títulos */
+    h4 {
+        color: $accent-color;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .footer-links {
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 0.8rem;
+                a {
+                    @extend .btn-link; 
+                    padding: 0;
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+
+/* Redes Sociales */
+    .footer-social {
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            .social-link {
+                @extend .btn-link;
+                padding: 0;
+                
+                &:hover {
+                    padding-left: 10px; 
+                }
+            }
+        }
+    }
+
+/* Copyright */
+    .footer-bottom {
+        border-top: 1px solid rgba($text-light, 0.1);
+        padding-top: 2rem;
+        text-align: center;
+        
+        p {
+            font-size: 0.8rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
     }
 }
